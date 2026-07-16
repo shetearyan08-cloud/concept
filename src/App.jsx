@@ -1,14 +1,14 @@
 import React from 'react';
 import Hero from './sections/Hero';
-import Showcase3D from './sections/Showcase3D'; // <-- Loads your 3D section
+import Showcase3D from './sections/Showcase3D';
 import Waves from './components/reactbits/backgrounds/Waves';
 
 function App() {
   return (
     <div className="relative min-h-screen bg-zinc-950 text-white overflow-hidden">
       
-      {/* Background waves */}
-      <div className="absolute inset-0 -z-10 opacity-40">
+      {/* Background Layer: Flowing Line Waves */}
+      <div className="absolute inset-0 -z-10 opacity-45">
         <Waves
           lineColor="rgba(139, 92, 246, 0.3)"
           backgroundColor="transparent"
@@ -24,10 +24,10 @@ function App() {
         />
       </div>
 
-      {/* Main page sections */}
+      {/* Content Layer: Hero Banner followed by the 3D Showcase */}
       <main className="relative z-10">
         <Hero />
-        <Showcase3D /> {/* <-- Renders your interactive 3D model! */}
+        <Showcase3D />
       </main>
     </div>
   );
